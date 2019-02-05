@@ -30,12 +30,11 @@ $( document ).ready(function() {
 function getLocalProfile(callback){
     var profileImgSrc      = localStorage.getItem("PROFILE_IMG_SRC");
     var profileName        = localStorage.getItem("PROFILE_NAME");
-    var profileReAuthEmail = localStorage.getItem("PROFILE_REAUTH_EMAIL");
+    //var profileReAuthEmail = localStorage.getItem("PROFILE_REAUTH_EMAIL");
 
     if(profileName !== null
-            && profileReAuthEmail !== null
             && profileImgSrc !== null) {
-        callback(profileImgSrc, profileName, profileReAuthEmail);
+        callback(profileImgSrc, profileName);
     }
 }
 
